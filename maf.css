@@ -1,0 +1,231 @@
+/* First, the layout/style of the site for a landscape orientation (computers) */
+@media only screen and (min-aspect-ratio: 100/100) {
+
+  /* set variables */
+  :root {
+	  --banner-width: 78.5vw;
+	  --navigation-width: 11vw;
+	  --content-width: 64vw;
+
+	  --banner-height: 3.8vh;
+	  --navigation-height: 94vh;
+   	--content-height: 94vh;
+
+    --highlight-color: indigo;
+    --navlink-color: #ccad00;
+    --header-color: #ccad00;
+    --navigation-color: #596673;
+  }
+  /* BODY SETTINGS */
+  /* default font size, font, color, and spacing for entire body */
+  body {font:2.4vh Palatino, serif; color:black; line-height:2.4vh;}
+  /* margins of body, background */
+  body {margin:0 0 0 0; background-image:url("media/Landscape_with_stars.png"); background-position:center; background-repeat:no-repeat; background-size:cover; background-color:black;}
+  /* full screen background colors */
+  :-webkit-full-screen {background-color:whitesmoke;}
+  :-ms-fullscreen {background-color:whitesmoke;}
+  :fullscreen {background-color:whitesmoke;}
+
+
+  /* HEADER SETTINGS */
+  /* font size and color and location */
+  #header {font-size:1.2em; color:black; display:flex; align-items:center; justify-content:left;}
+  /* place header at top, set offset, width and height, hide overflow */
+  #header {clear:both; margin-left:9%; width:var(--banner-width); height:var(--banner-height); overflow:hidden;}
+  /* set background color and borders */
+  #header {background-color:var(--header-color); border-right:0.05rem black solid; border-left:0.05rem black solid; border-bottom:0.05rem black solid;}
+
+
+  /* NAVIGATION SETTINGS */
+  /* font size and spacing */
+  #navigation {font-size:1em; line-height:115%;}
+  /* place navbar on the left, set offset, set size, and padding */
+  #navigation {float:left; margin:0 0 0 9%; width:var(--navigation-width); height:var(--navigation-height); padding:1vh 1vw 1vh 0.5vw;}
+  /* background color, hide overflow */
+  #navigation {background-color:var(--navigation-color); overflow:hidden;}
+  /* set borders */
+  #navigation {border-left:0.05rem black solid; border-bottom:0.05rem black solid;}
+
+
+  /* CONTENT SETTINGS */
+  /* content font size, alignment, color, and spacing */
+  #content {font-size:100%; text-align:left; color:black; line-height:100%;}
+  /*  place content on the right, set width and height, allow scroll for overflow */
+  #content {float:left; width:var(--content-width); height:var(--content-height); overflow:auto;}
+  /*  background color, padding */
+  #content {background:whitesmoke; padding:1vh 1vw 1vh 1vw;}
+  /*  create borders */
+  #content {border-right:0.05rem black solid; border-bottom:0.05rem black solid;}
+
+
+  /* HEADERS */
+  /* page and subject headers */
+  h1 {font-weight:150; font-size:1.5em; color:black; padding:0.4vh 0.5vw 0.2vh 0.5vw; text-align:center;}
+  h2 {font-weight:bold; font-size:1.2em; color:black; float:left; display:inline; clear:both;}
+  h2 a {color:var(--highlight-color); text-decoration:none;}
+  /* main navigation link */
+  h3 {width:100%; font-weight:150; font-size:1.1em; margin:1.5vh 1vw 1.5vh 0vw; border-bottom:0.15rem solid var(--navlink-color); text-align:left;}
+  h3 a {color:whitesmoke; text-decoration:none;}
+  h3 a:hover {color:var(--navlink-color); text-decoration:none;}
+  /*  sub navigation link */
+  h4 {width:90%; font-weight:100; font-size:1em; margin:1vh 1vw 1vh 1.1vw; border-bottom:0.15rem solid var(--navlink-color); text-align:left;}
+  h4 a {color:whitesmoke; text-decoration:none;}
+  h4 a:hover {color:var(--navlink-color); text-decoration:none;}
+  /*  currently selected page navigation link */
+  h5 {width:100%; font-weight:150; font-size:110%; margin:1.5vh 1vw 1.5vh 0vw;}
+  h5 a {color:var(--navlink-color); text-decoration:none;}
+  h5 a:hover {color:var(--navlink-color); text-decoration:none;}
+  h5 {border-bottom:0.15rem solid var(--navlink-color); text-align:left;}
+
+  /* MISCELLANEOUS */
+  /* figure links with captions */
+  figure {text-align:center; text-indent:0; margin:1vh 1vw 1vh 1vw;}
+  figure a {text-decoration:none; color:var(--highlight-color);}
+  figure a:hover {text-decoration:none; border-bottom:0.15rem solid var(--highlight-color);}
+  figure font {font-size:170%;}
+  /* for generic links (publications, etc.) */
+  p a {text-decoration:none; color:var(--highlight-color);}
+  p a:hover {text-decoration:none; border-bottom:0.15rem solid var(--highlight-color);}
+
+  /* CLASSES */
+  /* row and column for figure links */
+  .row {display:flex;}
+  .leftcolumn {flex:50%;}
+  .rightcolumn {flex:50%;}
+  /* for publication list margin and wrapping */
+  .pub {margin-left:1.5vw; width:80%;}
+  /* generic indented text */
+  .tab {margin-left:0.5vw; padding-right:0.5vw;}
+  .dtab {margin-left:2.5%; padding-right:0.5vw;}
+  /*  class for centering images, videos, etc. */
+  .center {margin:auto auto auto auto; display:block; position:relative; overflow:hidden;}
+  /*  style for inline (within the content area) links */
+  .external {font:100% Copperplate; color:black;} /*Papyrus, Copperplate, Courier*/
+  /*  class for cv */
+  .cv {margin:auto auto auto auto; display:block; position:relative; overflow:hidden; width:89%; height:94%;}
+  /* for subject lines */
+  .subject {height:0.33%; background-color:black; border:none;}
+  /* copyright and credit footer */
+  .footer {position:fixed; bottom:1%;}
+}
+
+
+/* Second, the layout/style of the site for a portrait orientation (phones) */
+@media only screen and (max-aspect-ratio: 100/100) {
+
+    /* set variables */
+    :root {
+  	  --banner-width: 0;
+  	  --navigation-width: 96vw;
+  	  --content-width: 96vw;
+
+  	  --banner-height: 0;
+  	  --navigation-height: 10vh;
+     	--content-height: 88.8vh;
+
+      --highlight-color: indigo;
+      --navlink-color: #ccad00;
+      --header-color: #ccad00;
+      --navigation-color: #596673;
+    }
+
+    /* BODY SETTINGS */
+    /* default font size, font, color, and spacing for entire body */
+    body {font:2.4vh Palatino, serif; color:black; line-height:2.4vh;}
+    /* margins of body, background */
+    body {margin:0 0 0 0; background-color:var(--navigation-color);}
+    /* full screen background colors */
+    :-webkit-full-screen {background-color:whitesmoke;}
+    :-ms-fullscreen {background-color:whitesmoke;}
+    :fullscreen {background-color:whitesmoke;}
+
+    /* HEADER SETTINGS -- TURNED OFF */
+    /* font size and color and location */
+    #header {font-size:0; color:black; display:flex; align-items:center; justify-content:left;}
+    /* place header at top, set offset, width and height, hide overflow */
+    #header {clear:both; margin-left:0; width:var(--banner-width); height:var(--banner-height); overflow:hidden;}
+    /* set background color and borders */
+    #header {background-color:var(--header-color); border-right:0 black solid; border-left:0 black solid; border-bottom:0 black solid;}
+
+
+    /* NAVIGATION SETTINGS */
+    /* font size and spacing */
+    #navigation {font-size:1.2em; color:whitesmoke; display:flex; align-items:center; justify-content:left;}
+    /* place navbar on top, set offset, set size, and padding */
+    #navigation {clear:both; width:var(--navigation-width); height:var(--navigation-height); padding:0vh 2vw 0vh 2vw;}
+    /* background color, hide overflow */
+    #navigation {background-color:var(--header-color); overflow:hidden;}
+    /* set borders */
+    #navigation {border-bottom:0.05rem black solid;}
+
+
+    /* CONTENT SETTINGS */
+    /* content font size, alignment, color, and spacing */
+    #content {font-size:100%; text-align:left; color:black; line-height:100%;}
+    /*  place content on the right, set width and height, allow scroll for overflow */
+    #content {clear:both; width:var(--content-width); height:var(--content-height); overflow:auto; padding:1vh 2vw 0vh 2vw;}
+    /*  background color, padding */
+    #content {background:whitesmoke;}
+
+
+    /* HEADERS */
+    /* page and subject headers */
+    h1 {font-weight:150; font-size:1.5em; color:black; padding:0.4vh 0.5vw 0.2vh 0.5vw; text-align:center; clear:both;}
+    h2 {font-weight:bold; font-size:1em; color:black; float:left; display:inline; clear:both;}
+    h2 a {color:var(--highlight-color); text-decoration:none;}
+    /* main navigation link */
+    h3 {width:100%; font-weight:150; font-size:1.1em; margin:1.5vh 1vw 1.5vh 0vw; border-bottom:0.15rem solid var(--navlink-color); text-align:left;}
+    h3 a {color:whitesmoke; text-decoration:none;}
+    h3 a:hover {color:var(--navlink-color); text-decoration:none;}
+    /*  sub navigation link */
+    h4 {width:90%; font-weight:100; font-size:1em; margin:1vh 1vw 1vh 1.1vw; border-bottom:0.15rem solid var(--navlink-color); text-align:left;}
+    h4 a {color:whitesmoke; text-decoration:none;}
+    h4 a:hover {color:var(--navlink-color); text-decoration:none;}
+    /*  currently selected page navigation link */
+    h5 {width:100%; font-weight:150; font-size:110%; margin:1.5vh 1vw 1.5vh 0vw;}
+    h5 a {color:var(--navlink-color); text-decoration:none;}
+    h5 a:hover {color:var(--navlink-color); text-decoration:none;}
+    h5 {border-bottom:0.15rem solid var(--navlink-color); text-align:left;}
+
+    /* MISCELLANEOUS */
+    /* figure links with captions */
+    figure {text-align:center; text-indent:0; margin:1vh 0vw 1vh 1vw;}
+    figure a {text-decoration:none; color:var(--highlight-color);}
+    figure a:hover {text-decoration:none; border-bottom:0.15rem solid var(--highlight-color);}
+    figure font {font-size:120%;}
+    /* for generic links (publications, etc.) */
+    p a {text-decoration:none; color:var(--highlight-color);}
+    p a:hover {text-decoration:none; border-bottom:0.15rem solid var(--highlight-color);}
+    /* make images and videos larger for portrait view */
+    img {width:97%; margin-bottom:3%;}
+    video {width:97%; margin-bottom:3%;}
+
+    /* CLASSES */
+    /* row and column for figure links */
+    .row {display:flex;}
+    .leftcolumn {flex:50%;}
+    .rightcolumn {flex:50%;}
+    /* for publication list margin and wrapping */
+    .pub {margin-left:0.5vw; width:97%;}
+    /* generic indented text */
+    .tab {margin-left:0.5vw; padding-right:0.5vw;}
+    .dtab {margin-left:2.5%; padding-right:0.5vw;}
+    /* class for centering images, videos, etc. */
+    .center {margin:auto auto auto auto; display:block; position:relative; overflow:hidden;}
+    /* style for inline (within the content area) links */
+    .external {font:100% Copperplate; color:black;} /*Papyrus, Copperplate, Courier*/
+    /* class for cv */
+    .cv {margin:auto auto auto auto; display:block; position:relative; overflow:hidden; width:99%; height:94%;}
+    /* phone view dropdown menu */
+    .dropdown {float:left; overflow:hidden;}
+    .dropdown .dropbtn {border:auto; background-color:inherit; font-family:inherit; font-size:inherit;}
+    /* .dropdown:hover .dropbtn {color:whitesmoke;} */
+    .dropbtn:hover {color:whitesmoke;}
+    .dropdown-content {display:none; position:absolute; background-color:var(--navigation-color); padding:2% 4% 2% 4%; font-size:75%; z-index:1; width:30%;}
+    .show {display:block;}
+    .rotate {transform:rotate(90deg);}
+    /* for subject lines */
+    .subject {height:0.33%; background-color:black; border:none;}
+    /* copyright and credit footer */
+		.footer {position:fixed; bottom:1%; font-size:0;}
+}
