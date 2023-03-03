@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<!------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="M.A. Fernandez" />
+
+	<link rel="stylesheet" type="text/css" href="../maf.css" media="screen" />
+	<title>Past Work | M.A. Fernandez</title>
+	<link rel="shortcut icon" type="image/x-icon" href="../media/icon.ico">
+	<script type="text/javascript" src="scripts.js"></script>
+</head>
+<!------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------>
+
+<body>
+
+	<div id="header"><p class="tab">Martin A. Fernandez</p></div>
+	<div id="navigation"><script language="javascript">navbar(3,3,5,3,3,3,' Past Work');</script></div>
+
+  <div id="content">
+    <h1 onclick="goFullScreen('content')"> lyman-&alpha; forest emulator </h1><hr class="subject">
+    <div>
+      <p class="tab"><b>The Lyman-&alpha; forest</b> is a series of absorption features in the spectrum of quasars. As light travels from the quasar towards us, two effects combine to create the observed forest: the expansion of the universe redshifts the spectrum, and these redshifted photons are absorbed and scattered by hydrogen in the intergalactic medium (IGM). Since overdensities will absorb more photons, the Lyman-&alpha; forest is effectively a one-dimensional density map along the line of sight.</p>
+      <p class="tab">The figure below is an example of the observed Lyman-&alpha; forest, from <i>O'Meara et al. APJ 552 718,</i> <a target="_blank" href="https://arxiv.org/abs/astro-ph/0011179"><b> arXiv: 0011179</b></a>.
+      <p><img class=center src="../media/forest.png" width="80%" style ="padding:0 2% 0 1%; clear:both;" onclick="goFullScreen('forest')" id="forest"></p>
+    </div>
+    <hr style="clear:both;">
+    <div>
+      <p class="tab">In addition to probing structure, the Lyman-&alpha; forest can be used to characterize the IGM thermal and ionization history (the epoch of reionization). In turn, this can be used to test the sources of background ionizing radiation and ultimately tell us about early stars and galaxies. However, because Lyman-&alpha; forest observations probe non-linearities (the overdensities along the line of sight), simulations are required to interpret observations.</p>
+      <p class="tab">Below is the dark matter structure (left) and gas temperature (right) for a simulation aimed at probing the Lyman-&alpha; forest.</p>
+      <div class="row" onclick="goFullScreen('sims')" id="sims">
+        <div class="leftcolumn">
+          <img class=center src="../media/dm.png" width="85%" style="padding:1% 0 1.5% 0%;">
+        </div>
+        <div class="rightcolumn">
+          <img class=center src="../media/gas_int-nrg.png" width="85%" style="padding:1% 0% 1.5% 0">
+        </div>
+      </div>
+    </div>
+    <hr style="clear:both;">
+    <div>
+      <p><img src="../media/cornerplot.png" width="45%" align="right" style ="padding:0 2% 1% 1%;" onclick="goFullScreen('corner')" id="corner"></p>
+      <p class="tab">Furthermore, to fully exploit the Lyman-&alpha; forest requires a suite of simulations with varying astrophysical and cosmological parameters. This requires many high resolution simulations, which can be very costly in computational resources.</p>
+      <p class="tab">To get around this computational bottleneck, I am building a Gaussian process emulator for the Lyman-&alpha; forest flux power spectrum. An emulator is a machine learning method that can be trained using relatively few simulations to predict other simulations without having to run them. It is a stochastic process that interpolates between simulation outputs (in this case, the flux power spectrum) for a range of inputs.</p>
+      <p class="tab">The figure here shows an example of a Markov Chain Monte Carlo analysis using a test emulator. The posterior probability is shown for a set of cosmological and astrophysical parameters. In this case, the 'observation' was actually another simulation, and the correct parameters are shown with the dashed lines.</p>
+    </div>
+
+  </div>
+
+</body>
+
+<!------------------------------------------------------------------------------------------------>
+<!------------------------------------------------------------------------------------------------>
+
+</html>

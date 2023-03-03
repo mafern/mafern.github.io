@@ -20,7 +20,8 @@
   /* default font size, font, color, and spacing for entire body */
   body {font:2.4vh Palatino, serif; color:black; line-height:2.4vh;}
   /* margins of body, background */
-  body {margin:0 0 0 0; background-image:url("media/Landscape_with_stars.png"); background-position:center; background-repeat:no-repeat; background-size:cover; background-color:black;}
+  /* body {margin:0 0 0 0; background-image:url("media/Landscape_with_stars.png"); background-position:center; background-repeat:no-repeat; background-size:cover; background-color:black;} */
+  body {margin:0 0 0 0; background-position:center; background-repeat:no-repeat; background-size:cover; background-color:black;}
   /* full screen background colors */
   :-webkit-full-screen {background-color:whitesmoke;}
   :-ms-fullscreen {background-color:whitesmoke;}
