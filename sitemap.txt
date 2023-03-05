@@ -1,6 +1,7 @@
 https://mafern.github.io/index.html
 https://mafern.github.io/current.html
 https://mafern.github.io/past.html
+https://mafern.github.io/pastwork/lya.html
 https://mafern.github.io/pastwork/gwppm.html
 https://mafern.github.io/pastwork/sb2s.html
 https://mafern.github.io/pastwork/cosmicstrings.html

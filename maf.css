@@ -12,16 +12,15 @@
    	--content-height: 94vh;
 
     --highlight-color: indigo;
-    --navlink-color: #ccad00;
-    --header-color: #ccad00;
+    --navlink-color: #FEC524;
+    --header-color: #FEC524;
     --navigation-color: #596673;
   }
   /* BODY SETTINGS */
   /* default font size, font, color, and spacing for entire body */
   body {font:2.4vh Palatino, serif; color:black; line-height:2.4vh;}
   /* margins of body, background */
-  /* body {margin:0 0 0 0; background-image:url("media/Landscape_with_stars.png"); background-position:center; background-repeat:no-repeat; background-size:cover; background-color:black;} */
-  body {margin:0 0 0 0; background-position:center; background-repeat:no-repeat; background-size:cover; background-color:black;}
+  body {margin:0 0 0 0; background-image:url("media/sim_structure_l.png"), url("media/sim_structure_r.png"); background-position:left top, right bottom; background-repeat:repeat-y; background-size:9%, 13%; background-color:white;}
   /* full screen background colors */
   :-webkit-full-screen {background-color:whitesmoke;}
   :-ms-fullscreen {background-color:whitesmoke;}
@@ -107,7 +106,7 @@
   /* for subject lines */
   .subject {height:0.33%; background-color:black; border:none;}
   /* copyright and credit footer */
-  .footer {position:fixed; bottom:1%;}
+  .footer {position:left bottom; bottom:1%;}
 }
 
 
@@ -228,5 +227,5 @@
     /* for subject lines */
     .subject {height:0.33%; background-color:black; border:none;}
     /* copyright and credit footer */
-		.footer {position:fixed; bottom:1%; font-size:0;}
+		.footer {position:left bottom; bottom:1%;}
 }
