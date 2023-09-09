@@ -27,26 +27,28 @@
       <p class="tab"><b>The Lyman-&alpha; forest</b> is a series of absorption features in the spectrum of quasars. As light travels from the quasar towards us, two effects combine to create the observed forest: the expansion of the universe redshifts the spectrum, and these redshifted photons are absorbed and scattered by hydrogen in the intergalactic medium (IGM). Since overdensities will absorb more photons, the Lyman-&alpha; forest is effectively a one-dimensional density map along the line of sight.</p>
       <p class="tab">The figure below is an example of the observed Lyman-&alpha; forest, from <i>O'Meara et al. APJ 552 718,</i> <a target="_blank" href="https://arxiv.org/abs/astro-ph/0011179"><b> arXiv: 0011179</b></a>.
       <p><img class=center src="../media/forest.png" width="80%" style ="padding:0 2% 0 1%; clear:both;" onclick="goFullScreen('forest')" id="forest"></p>
+			<p class="tab">The figure below shows a snapshot of the gas density and temperature (colors) for a lower resolution (bottom panel) and a higher resolution (top panel) simulation. The middle panel shows the Lyman-&alpha; forest spectrum extracted from the these simulations, along the line shown passing through the other panels.</p>
+			<p><img class=center src="../media/spectra_temp_simulation.png" width="80%" style ="padding:0 0% 0 4%; clear:both;" onclick="goFullScreen('forest')" id="spectra"></p>
     </div>
     <hr style="clear:both;">
     <div>
-      <p class="tab">In addition to probing structure, the Lyman-&alpha; forest can be used to characterize the IGM thermal and ionization history (the epoch of reionization). In turn, this can be used to test the sources of background ionizing radiation and ultimately tell us about early stars and galaxies. However, because Lyman-&alpha; forest observations probe non-linearities (the overdensities along the line of sight), simulations are required to interpret observations.</p>
-      <p class="tab">Below is the dark matter structure (left) and gas temperature (right) for a simulation aimed at probing the Lyman-&alpha; forest.</p>
-      <div class="row" onclick="goFullScreen('sims')" id="sims">
+      <p class="tab">Because Lyman-&alpha; forest observations probe non-linearities (the overdensities along the line of sight), simulations are required to interpret observations. Furthermore, to fully exploit the Lyman-&alpha; forest requires a suite of simulations with varying astrophysical and cosmological parameters. This requires many high resolution simulations.<br>
+			<span class='dtab'>To get around this computational bottleneck, I built a multi-fidelity Gaussian process emulator for the Lyman-&alpha; forest. A multi-fidelity emulator is a machine learning method that can be trained using a few tens of low resolution simulations along with just a couple of high resolution simulations to predict high resolution simulation outputs without actually having to run them.</p>
+		</div>
+		<div class="row" onclick="goFullScreen('sims')" id="sims">
         <div class="leftcolumn">
-          <img class=center src="../media/dm.png" width="85%" style="padding:1% 0 1.5% 0%;">
+          <img class=center src="../media/sample_params.png" width="85%" style="padding:5% 0 1.5% 0%;">
         </div>
         <div class="rightcolumn">
-          <img class=center src="../media/gas_int-nrg.png" width="85%" style="padding:1% 0% 1.5% 0">
+          <img class=center src="../media/meant_range.png" width="85%" style="padding:1% 0% 1.5% 0">
         </div>
-      </div>
     </div>
-    <hr style="clear:both;">
+		<div>
+      <p class="tab">Above left are the input parameters for the simulations I ran for this emulator, with the grey crosses representing low resolution simulations and the red circles the high resolution simulations. Above right are the mean IGM temperatures for each of these simulations for a range of redshifts. The bottom panel shows the ratio of the low to high resolution temperatures for simulations run with the same cosmological and astrophysical parameters. This simulation suite, named PRIYA, was written up in <a target="_blank" href="https://arxiv.org/abs/2306.05471"><b>arXiv: 2306.05471</b></a></p>
+		</div>
+		<hr style="clear:both;">
     <div>
-      <p><img src="../media/cornerplot.png" width="45%" align="right" style ="padding:0 2% 1% 1%;" onclick="goFullScreen('corner')" id="corner"></p>
-      <p class="tab">Furthermore, to fully exploit the Lyman-&alpha; forest requires a suite of simulations with varying astrophysical and cosmological parameters. This requires many high resolution simulations, which can be very costly in computational resources.</p>
-      <p class="tab">To get around this computational bottleneck, I am building a Gaussian process emulator for the Lyman-&alpha; forest flux power spectrum. An emulator is a machine learning method that can be trained using relatively few simulations to predict other simulations without having to run them. It is a stochastic process that interpolates between simulation outputs (in this case, the flux power spectrum) for a range of inputs.</p>
-      <p class="tab">The figure here shows an example of a Markov Chain Monte Carlo analysis using a test emulator. The posterior probability is shown for a set of cosmological and astrophysical parameters. In this case, the 'observation' was actually another simulation, and the correct parameters are shown with the dashed lines.</p>
+      <p class="tab">I developed a framework using this multi-fidelity emulator along with observations from BOSS (Baryon Oscillation Spectroscopic Survey) to conduct parameter inference using Markov Chain Monte Carlo. The inference includes astrophysical (midpoint of hydrogen reionization, start and end of helium reionization) and cosmological (the amplitude and slope of the primordial power spectrum) parameters. The results of this inference can be found in . . . </p>
     </div>
 
   </div>

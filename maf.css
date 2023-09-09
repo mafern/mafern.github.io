@@ -20,12 +20,11 @@
   /* default font size, font, color, and spacing for entire body */
   body {font:2.4vh Palatino, serif; color:black; line-height:2.4vh;}
   /* margins of body, background */
-  body {margin:0 0 0 0; background-image:url("media/sim_structure_l.png"), url("media/sim_structure_r.png"); background-position:left top, right bottom; background-repeat:repeat-y; background-size:9%, 13%; background-color:white;}
+  body {margin:0 0 0 0; background-color:black;}
   /* full screen background colors */
   :-webkit-full-screen {background-color:whitesmoke;}
   :-ms-fullscreen {background-color:whitesmoke;}
   :fullscreen {background-color:whitesmoke;}
-
 
   /* HEADER SETTINGS */
   /* font size and color and location */
@@ -106,7 +105,7 @@
   /* for subject lines */
   .subject {height:0.33%; background-color:black; border:none;}
   /* copyright and credit footer */
-  .footer {position:left bottom; bottom:1%;}
+  .footer {position:fixed; bottom:1%;}
 }
 
 
