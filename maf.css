@@ -3,9 +3,9 @@
 
   /* set variables */
   :root {
-	  --banner-width: 78.5vw;
+	  --banner-width: 67.5vw;
 	  --navigation-width: 11vw;
-	  --content-width: 64vw;
+	  --content-width: 53vw;
 
 	  --banner-height: 3.8vh;
 	  --navigation-height: 94vh;
@@ -16,34 +16,54 @@
     --header-color: #FEC524;
     --navigation-color: #596673;
   }
+  
   /* BODY SETTINGS */
   /* default font size, font, color, and spacing for entire body */
   body {font:2.4vh Palatino, serif; color:black; line-height:2.4vh;}
-  /* margins of body, background */
-  body {margin:0 0 0 0; background-color:black;}
-  /* full screen background colors */
+  /* margins of body, background for different pages */
+  /* hurricane option */
+  body.hurricane {margin:0 0 0 0; width: 100vw; height: 100vh; background-color: black;
+    background-image: url('media/swirl.png'), url('media/hurricane.png'); background-position: 0.1vh 0.1vh, 77.5vw 0; background-size: 10vw 99.8vh, 22.5vw 99.8vh; background-repeat: no-repeat, no-repeat;}
+  /* earth option */
+  body.climate {margin:0 0 0 0; width: 100vw; height: 100vh; background-color: black;
+    background-image: url('media/swirl.png'), url('media/earth.png'); background-position: 0 0.1vh, 77.5vw 15vh; background-size: 10vw 99.8vh, 22.5vw 70vh; background-repeat: no-repeat, no-repeat;}
+  /* moon option */
+  body.past {margin:0 0 0 0; width: 100vw; height: 100vh; background-color: black;
+    background-image: url('media/swirl.png'), url('media/moon.png'); background-position: 0 0.1vh, 77.5vw 0; background-size: 10vw 99.8vh, 22.5vw; background-repeat: no-repeat, no-repeat;}
+  /* home page */
+  body.home {margin:0 0 0 0; width: 100vw; height: 100vh; background-color: black;
+    background-image: url('media/swirl.png'), url('media/me.png'); background-position: 0 0.1vh, 77.5vw center; background-size: 10vw 99.8vh, 22.5vw; background-repeat: no-repeat, no-repeat;}
+  /* publications */
+  body.pubs {margin:0 0 0 0; width: 100vw; height: 100vh; background-color: black;
+    background-image: url('media/swirl.png'), url('media/digging.jpg'); background-position: 0 0.1vh, 77.5vw center; background-size: 10vw 99.8vh, 22.5vw; background-repeat: no-repeat, no-repeat;}
+  /* basic black */
+  body.black {margin:0 0 0 0; width: 100vw; height: 100vh; background-color: black;
+    background-image: url('media/swirl.png'); background-position: 0 0.1vh; background-size: 10vw 99.8vh; background-repeat: no-repeat;}
+
+    /* full screen background colors */
   :-webkit-full-screen {background-color:whitesmoke;}
   :-ms-fullscreen {background-color:whitesmoke;}
   :fullscreen {background-color:whitesmoke;}
 
+  
   /* HEADER SETTINGS */
   /* font size and color and location */
   #header {font-size:1.2em; color:black; display:flex; align-items:center; justify-content:left;}
   /* place header at top, set offset, width and height, hide overflow */
-  #header {clear:both; margin-left:9%; width:var(--banner-width); height:var(--banner-height); overflow:hidden;}
+  #header {clear:both; margin-left:10vw; width:var(--banner-width); height:var(--banner-height); overflow:hidden;}
   /* set background color and borders */
-  #header {background-color:var(--header-color); border-right:0.05rem black solid; border-left:0.05rem black solid; border-bottom:0.05rem black solid;}
+  #header {background-color:var(--header-color); border-right:0.28rem black solid; border-left:0rem black solid; border-bottom:0.05rem black solid;}
 
 
   /* NAVIGATION SETTINGS */
   /* font size and spacing */
   #navigation {font-size:1em; line-height:115%;}
   /* place navbar on the left, set offset, set size, and padding */
-  #navigation {float:left; margin:0 0 0 9%; width:var(--navigation-width); height:var(--navigation-height); padding:1vh 1vw 1vh 0.5vw;}
+  #navigation {float:left; margin:0 0 0 10vw; width:var(--navigation-width); height:var(--navigation-height); padding:1vh 1vw 1vh 0.5vw;}  
   /* background color, hide overflow */
   #navigation {background-color:var(--navigation-color); overflow:hidden;}
   /* set borders */
-  #navigation {border-left:0.05rem black solid; border-bottom:0.05rem black solid;}
+  #navigation {border-left:0rem black solid; border-bottom:0.05rem black solid;}
 
 
   /* CONTENT SETTINGS */
@@ -54,7 +74,7 @@
   /*  background color, padding */
   #content {background:whitesmoke; padding:1vh 1vw 1vh 1vw;}
   /*  create borders */
-  #content {border-right:0.05rem black solid; border-bottom:0.05rem black solid;}
+  #content {border-right:0.28rem black solid; border-bottom:0.05rem black solid;}
 
 
   /* HEADERS */
