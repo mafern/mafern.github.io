@@ -3,9 +3,9 @@
 
   /* set variables */
   :root {
-	  --banner-width: 67.5vw;
-	  --navigation-width: 11vw;
-	  --content-width: 53vw;
+	  --banner-width: 99.5vw;
+	  --navigation-width: 15vw;
+	  --content-width: 66vw;
 
 	  --banner-height: 3.8vh;
 	  --navigation-height: 94vh;
@@ -21,50 +21,35 @@
   /* default font size, font, color, and spacing for entire body */
   body {font:2.4vh Palatino, serif; color:black; line-height:2.4vh;}
   /* margins of body, background for different pages */
-  /* hurricane option */
-  body.hurricane {margin:0 0 0 0; width: 100vw; height: 100vh; background-color: black;
-    background-image: url('media/swirl.png'), url('media/hurricane.png'); background-position: 0.1vh 0.1vh, 77.5vw 0; background-size: 10vw 99.8vh, 22.5vw 99.8vh; background-repeat: no-repeat, no-repeat;}
-  /* earth option */
-  body.climate {margin:0 0 0 0; width: 100vw; height: 100vh; background-color: black;
-    background-image: url('media/swirl.png'), url('media/earth.png'); background-position: 0 0.1vh, 77.5vw 15vh; background-size: 10vw 99.8vh, 22.5vw 70vh; background-repeat: no-repeat, no-repeat;}
-  /* moon option */
-  body.past {margin:0 0 0 0; width: 100vw; height: 100vh; background-color: black;
-    background-image: url('media/swirl.png'), url('media/moon.png'); background-position: 0 0.1vh, 77.5vw 0; background-size: 10vw 99.8vh, 22.5vw; background-repeat: no-repeat, no-repeat;}
-  /* home page */
-  body.home {margin:0 0 0 0; width: 100vw; height: 100vh; background-color: black;
-    background-image: url('media/swirl.png'), url('media/me.png'); background-position: 0 0.1vh, 77.5vw center; background-size: 10vw 99.8vh, 22.5vw; background-repeat: no-repeat, no-repeat;}
-  /* publications */
-  body.pubs {margin:0 0 0 0; width: 100vw; height: 100vh; background-color: black;
-    background-image: url('media/swirl.png'), url('media/digging.jpg'); background-position: 0 0.1vh, 77.5vw center; background-size: 10vw 99.8vh, 22.5vw; background-repeat: no-repeat, no-repeat;}
+  /* normal layout */
+  body.normal {margin:0 0 0 0; width: 100vw; height: 100vh; background-color: #596673;
+     background-position: 0 0.1vh, 77.5vw center; background-size: 10vw 99.8vh, 22.5vw; background-repeat: no-repeat, no-repeat;}
   /* basic black */
   body.black {margin:0 0 0 0; width: 100vw; height: 100vh; background-color: black;
-    background-image: url('media/swirl.png'); background-position: 0 0.1vh; background-size: 10vw 99.8vh; background-repeat: no-repeat;}
+    background-position: 0 0.1vh; background-size: 10vw 99.8vh; background-repeat: no-repeat;}
 
     /* full screen background colors */
   :-webkit-full-screen {background-color:whitesmoke;}
   :-ms-fullscreen {background-color:whitesmoke;}
   :fullscreen {background-color:whitesmoke;}
-
   
   /* HEADER SETTINGS */
   /* font size and color and location */
   #header {font-size:1.2em; color:black; display:flex; align-items:center; justify-content:left;}
   /* place header at top, set offset, width and height, hide overflow */
-  #header {clear:both; margin-left:10vw; width:var(--banner-width); height:var(--banner-height); overflow:hidden;}
+  #header {clear:both; margin-left:0vw; width:var(--banner-width); height:var(--banner-height); overflow:hidden;}
   /* set background color and borders */
   #header {background-color:var(--header-color); border-right:0.28rem black solid; border-left:0rem black solid; border-bottom:0.05rem black solid;}
-
 
   /* NAVIGATION SETTINGS */
   /* font size and spacing */
   #navigation {font-size:1em; line-height:115%;}
   /* place navbar on the left, set offset, set size, and padding */
-  #navigation {float:left; margin:0 0 0 10vw; width:var(--navigation-width); height:var(--navigation-height); padding:1vh 1vw 1vh 0.5vw;}  
+  #navigation {float:left; margin:0 0 0 0vw; width:var(--navigation-width); height:var(--navigation-height); padding:1vh 1vw 1vh 0.5vw;}  
   /* background color, hide overflow */
   #navigation {background-color:var(--navigation-color); overflow:hidden;}
   /* set borders */
   #navigation {border-left:0rem black solid; border-bottom:0.05rem black solid;}
-
 
   /* CONTENT SETTINGS */
   /* content font size, alignment, color, and spacing */
@@ -74,8 +59,7 @@
   /*  background color, padding */
   #content {background:whitesmoke; padding:1vh 1vw 1vh 1vw;}
   /*  create borders */
-  #content {border-right:0.28rem black solid; border-bottom:0.05rem black solid;}
-
+  /* #content {border-right:0.28rem black solid; border-bottom:0.05rem black solid;} */
 
   /* HEADERS */
   /* page and subject headers */
@@ -114,8 +98,10 @@
   /* for publication list margin and wrapping */
   .pub {margin-left:1.5vw; width:80%;}
   /* generic indented text */
-  .tab {margin-left:0.5vw; padding-right:0.5vw;}
+  /* .tab {margin-left:0.5vw; padding-right:0.5vw;} */
+  .tab {margin-left:2.5vw; padding-right:2.5vw;}
   .dtab {margin-left:2.5%; padding-right:0.5vw;}
+  .ctab {margin-left:1.5vw; padding-right:19.5vw;}
   /*  class for centering images, videos, etc. */
   .center {margin:auto auto auto auto; display:block; position:relative; overflow:hidden;}
   /*  style for inline (within the content area) links */
@@ -125,8 +111,10 @@
   /* for subject lines */
   .subject {height:0.33%; background-color:black; border:none;}
   /* copyright and credit footer */
-  .footer {position:fixed; bottom:1%;}
-}
+  .footer {position:fixed; bottom:0%; font-size:medium}
+  /* for spanning figure */
+  .spanfig {margin:2% auto 0% auto; display:block; position:relative; overflow:hidden; width:70%; margin-bottom:1%;}
+  }
 
 
 /* Second, the layout/style of the site for a portrait orientation (phones) */
@@ -143,8 +131,8 @@
      	--content-height: 88.8vh;
 
       --highlight-color: indigo;
-      --navlink-color: #ccad00;
-      --header-color: #ccad00;
+      --navlink-color: #FEC524;
+      --header-color: #FEC524;
       --navigation-color: #596673;
     }
 
@@ -166,7 +154,6 @@
     /* set background color and borders */
     #header {background-color:var(--header-color); border-right:0 black solid; border-left:0 black solid; border-bottom:0 black solid;}
 
-
     /* NAVIGATION SETTINGS */
     /* font size and spacing */
     #navigation {font-size:1.2em; color:whitesmoke; display:flex; align-items:center; justify-content:left;}
@@ -177,15 +164,13 @@
     /* set borders */
     #navigation {border-bottom:0.05rem black solid;}
 
-
     /* CONTENT SETTINGS */
     /* content font size, alignment, color, and spacing */
     #content {font-size:100%; text-align:left; color:black; line-height:100%;}
     /*  place content on the right, set width and height, allow scroll for overflow */
     #content {clear:both; width:var(--content-width); height:var(--content-height); overflow:auto; padding:1vh 2vw 0vh 2vw;}
     /*  background color, padding */
-    #content {background:whitesmoke;}
-
+    #content {background:whitesmoke; padding:1vh 1vw 1vh 1vw;}
 
     /* HEADERS */
     /* page and subject headers */
@@ -216,8 +201,8 @@
     p a {text-decoration:none; color:var(--highlight-color);}
     p a:hover {text-decoration:none; border-bottom:0.15rem solid var(--highlight-color);}
     /* make images and videos larger for portrait view */
-    img {width:97%; margin-bottom:3%;}
-    video {width:97%; margin-bottom:3%;}
+    img {width:28%; margin-bottom:3%;}
+    video {width:28%; margin-bottom:3%;}
 
     /* CLASSES */
     /* row and column for figure links */
@@ -246,5 +231,7 @@
     /* for subject lines */
     .subject {height:0.33%; background-color:black; border:none;}
     /* copyright and credit footer */
-		.footer {position:left bottom; bottom:1%;}
+    .footer {position:fixed; bottom:1%; font-size:medium}
+    /* for spanning figure */
+    .spanfig {margin:-2% auto 0% auto; display:block; position:relative; overflow:hidden; width:70%; margin-bottom:1%;}
 }

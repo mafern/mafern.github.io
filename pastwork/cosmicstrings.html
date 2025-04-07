@@ -15,7 +15,7 @@
 <!------------------------------------------------------------------------------------------------>
 <!------------------------------------------------------------------------------------------------>
 
-<body class="past">
+<body class="normal">
 
 	<div id="header"><p class="tab">Martin A. Fernandez</p></div>
 	<div id="navigation"><script language="javascript">navbar(3,3,5,3,3,3,' Past Work');</script></div>
@@ -24,22 +24,27 @@
 		<h1 onclick="goFullScreen('content')"> cosmic strings </h1><hr class="subject">
 
 		<div>
-			<p><video src="../media/cstring.mp4" width="25%" controls style="padding:0 2% 1% 1%; float:left; clear:both;"></p>
+			<p><video src="../media/cstring.mp4" width="20%" controls style="padding:0 2% 1% 1%; float:left; clear:both;"></p>
 			<p><b>Cosmic Strings</b> are early universe phenomena that arise in many extensions to the standard model. They are linear topological defects that form as the universe expands and cools. Another way to think of cosmic strings is as elongated black holes; they are very dense and have some interesting gravitational properties.<br>
-			<span class='dtab'>The gravitational property in question is a rather strange alteration in the surrounding spacetime. Cosmic strings create a deficit angle around them. This means that in the vicinity of a cosmic string, a full rotation is less than 360 degrees.</span><br></p>
+			<span class='dtab'>One such property is a rather strange alteration in the surrounding space-time. Cosmic strings create a deficit angle around them. This means that in the vicinity of a cosmic string, a full rotation is less than 360 degrees.</span><br></p>
 			<p>The first video shows this effect for two particles traveling parallel to each other, but across this deficit angle. The red bar shows the actual distance between the two particles. The effect is to pull matter towards the string.</p>
 		</div>
 		<hr style="clear:both;">
 		<div>
-			<p><video src="../media/filaments.mp4" width="34%" controls style="padding:0 1% 0 2%; float:right;"></p>
+			<p><video src="../media/filaments.mp4" width="28%" controls style="padding:0 1% 1.5% 2%; float:right;"></p>
 			<p><br>I proposed a new method for detecting cosmic strings by quantifying the effect they have on the filamentary structure of the universe. The second video shows the process I developed to extract the filamentary structures from the simulations:
 			<ol>
 				<li>Particles that are in relatively low density regions compared to a threhold are removed, since filaments are overdensities.</li>
 				<li>The remaining particles are run through an algorithm called SCMS (subspace constrained mean shift). This identifies the spines of the filaments by iteratively shifting tracers towards the 'ridges' in the density.</li>
 				<li>Individual filaments are identified and separated, then particles are assigned to their nearest filament.</li>
 			</ol>
-			I presented the results of this work in <a target="_blank" href="https://arxiv.org/abs/2004.13752"><b>arXiv: 2004.13752</b></a></p>
+			I presented the results of this work in the paper below.</p>
 		</div>
+		<hr style="clear:both;">
+		<div id="content">
+			<iframe class="cv" width="99%" align="center" src="../media/2004.13752v2.pdf"></iframe>
+		</div>
+
 	</div>
 
 </body>
