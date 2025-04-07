@@ -45,7 +45,7 @@
   /* font size and spacing */
   #navigation {font-size:1em; line-height:115%;}
   /* place navbar on the left, set offset, set size, and padding */
-  #navigation {float:left; margin:0 0 0 0vw; width:var(--navigation-width); height:var(--navigation-height); padding:1vh 1vw 1vh 0.5vw;}  
+  #navigation {float:left; margin:0 0 0 0vw; width:var(--navigation-width); height:var(--navigation-height); padding:1vh 0.75vw 1vh 0.75vw;}  
   /* background color, hide overflow */
   #navigation {background-color:var(--navigation-color); overflow:hidden;}
   /* set borders */
