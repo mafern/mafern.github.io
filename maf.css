@@ -87,8 +87,8 @@
   figure a:hover {text-decoration:none; border-bottom:0.15rem solid var(--highlight-color);}
   figure font {font-size:170%;}
   /* for generic links (publications, etc.) */
-  p a {text-decoration:none; color:var(--highlight-color);}
-  p a:hover {text-decoration:none; border-bottom:0.15rem solid var(--highlight-color);}
+  p a {text-decoration:underline; color:var(--highlight-color);}
+  p a:hover {text-decoration:underline; color:var(--navlink-color);}
 
   /* CLASSES */
   /* row and column for figure links */
@@ -198,8 +198,8 @@
     figure a:hover {text-decoration:none; border-bottom:0.15rem solid var(--highlight-color);}
     figure font {font-size:120%;}
     /* for generic links (publications, etc.) */
-    p a {text-decoration:none; color:var(--highlight-color);}
-    p a:hover {text-decoration:none; border-bottom:0.15rem solid var(--highlight-color);}
+    p a {text-decoration:underline; color:var(--highlight-color);}
+    p a:hover {text-decoration:underline; color:var(--navlink-color);}
     /* make images and videos larger for portrait view */
     img {width:28%; margin-bottom:3%;}
     video {width:28%; margin-bottom:3%;}
