@@ -21,9 +21,15 @@
 	<div id="content">
     <h1> current research </h1><hr class="subject">
 
-		<p class="tab">My current work focuses on the use of machine learning in climate, primarily as a method for improving predictions. I work on a range of time scales, from multi-day hurricance predictions, to decadal climate predictions.</p>
+		<!-- <p class="tab">My current work focuses on the use of machine learning in climate, primarily as a method for improving predictions. I work on a range of time scales, from multi-day hurricance predictions, to decadal climate predictions.</p> -->
 
-		<div class="row">
+		<p class="tab"><img src="media/global_mask_schematic_cropped.png" width="35%" style="padding:0.5% 2% 0.5% 1%; float:left; clear:both;"></p>
+		<p class="tab"><b>Analog forecasting</b> is a method of weather and climate prediction that assumes past weather/climate evolve similarly to current weather/climate. The idea is that if current conditions look similar to some time in the past, then the known evolution of that past state can serve as a prediction for the future. Instead of matching current observations with historical observations, we match current observations with model simulations, thus we are doing model-analog forecasting. In the paper below, I use machine learning to identify the most important global regions to match current states with model-analogs for several specific prediction tasks (location, lead time).</p>
+
+		<p class="tab"><img src="media/MATTHEW_100406_cropped.png" width="35%" style="padding:0.5% 2% 0.5% 1%; float:left; clear:both;"></p>
+		<p class="tab"><b>TCANE (Tropical Cyclone Artificial Neural-network Error)</b> is a project aimed at improving tropical cyclone track and intensity error forecasting. This can be of use for forecasters and communities affected by these storms. In the paper below, I trained a machine learning model for predicting track forecast errors. The model is trained on historical data, including tropical cyclone forecast track errors, and the output is a storm specific error (bivariate normal) distribution.</p>
+
+		<!-- <div class="row">
 			<div class="leftcolumn">
 				<figure>
 				<a href="currentwork/tcane.html">
@@ -42,7 +48,7 @@
 				<p>multi-year-to-decadal predictions using a model-analog framework.</p>
 				</figure>
 			</div>
-		</div>
+		</div> -->
 	</div>
 </body>
 <!------------------------------------------------------------------------------------------------>
